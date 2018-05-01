@@ -1,0 +1,25 @@
+{
+  "name": "kkfor",
+  "version": "0.0.11",
+  "description": "vue components",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --port 8787 --config build/webpack.dev.config.js",
+    "dist:prod": "webpack --config build/webpack.dist.prod.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyqjs/kkfor.git"
+  },
+  "author": "wyq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wyqjs/kkfor/issues"
+  },
+  "homepage": "https://github.com/wyqjs/kkfor#readme",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "webpack": "^4.6.0"
+  }
+}
