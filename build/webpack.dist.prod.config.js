@@ -1,6 +1,8 @@
 const path = require('path')
+const merge = require('webpack-merge')
+const webpackBaseConfig = require('./webpack.base.config')
 
-module.exports = {
+module.exports = merge(webpackBaseConfig, {
   entry: {
     main: './src/index.js'
   },
@@ -8,4 +10,4 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     filename: 'kkfor.min.js'
   }
-}
+})

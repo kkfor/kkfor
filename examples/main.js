@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Kkfor from '../src/index'
 
+import App from './App'
+
 Vue.use(Kkfor)
 
 Vue.config.debug = true
