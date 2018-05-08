@@ -1,7 +1,9 @@
 const path = require('path')
 const merge = require('webpack-merge')
 const webpackBaseConfig = require('./webpack.base.config.js')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+console.log(__dirname)
 module.exports = merge(webpackBaseConfig, {
   mode: 'development',
   entry: {
@@ -12,5 +14,10 @@ module.exports = merge(webpackBaseConfig, {
     publicPath: '',
     filename: '[name].js',
     chunkFilename: '[name].chunk.js'
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'index.html'
+    })
+  ]
 })

@@ -5,7 +5,8 @@ const components = {
 }
 
 const iview = {
-  ...components
+  iButton: Button,
+  ...components,
 }
 
 const install = function(Vue) {
@@ -14,10 +15,11 @@ const install = function(Vue) {
   })
 }
 
-install(window.Vue)
+// install(window.Vue)
 
 const API = {
   install
 }
 
-module.exports.default = module.exports = API
+// module.exports.default = module.exports = API
+export default API

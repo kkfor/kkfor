@@ -1,5 +1,4 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   module: {
@@ -19,7 +18,6 @@ module.exports = {
     extensions: ['.js', '.vue']
   },
   plugins: [
-    new VueLoaderPlugin(),
-    new HtmlWebpackPlugin()
+    new VueLoaderPlugin()
   ]
 }

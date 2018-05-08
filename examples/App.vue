@@ -1,5 +1,7 @@
 <template>
-  <div>1122</div>
+  <div>
+    <Button>按钮</Button>
+  </div>
 </template>
 <script>
   export default {
