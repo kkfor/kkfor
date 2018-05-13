@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Kkfor from '../src/index'
+import '../src/styles/index.scss'
 
 import App from './App'
 

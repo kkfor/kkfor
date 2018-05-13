@@ -5,8 +5,7 @@ const components = {
 }
 
 const iview = {
-  iButton: Button,
-  ...components,
+  ...components
 }
 
 const install = function(Vue) {

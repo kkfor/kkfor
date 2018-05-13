@@ -2,8 +2,8 @@ const path = require('path')
 const merge = require('webpack-merge')
 const webpackBaseConfig = require('./webpack.base.config.js')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 
-console.log(__dirname)
 module.exports = merge(webpackBaseConfig, {
   mode: 'development',
   entry: {
@@ -18,6 +18,16 @@ module.exports = merge(webpackBaseConfig, {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'index.html'
-    })
-  ]
+    }),
+    new NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
+  devServer: {
+    host: '0.0.0.0',
+    port: '8080',
+    noInfo: true,
+    // hot: true,
+    // inline: true,
+    // hotOnly: true
+  }
 })
