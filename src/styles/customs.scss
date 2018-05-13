@@ -1,2 +1,29 @@
 // Prefix
 $css-prefix: fo-;
+
+// Color
+$primary-color: #2b8cf0;
+$info-color: #2db7f5;
+
+
+// Base
+$text-color: #495060;
+
+// Border color
+$border-color-base: #dddee1;
+
+// Background color
+$background-color-base: #f7f7f7;
+
+// Button
+$btn-font-weight: normal;
+$btn-padding-base: 6px 15px;
+$btn-font-size: 12px;
+$btn-border-radius: 4px;
+
+$btn-default-color: $text-color;
+$btn-default-bg: $background-color-base;
+$btn-default-border: $border-color-base;
+
+// Animation
+$transition-time: .2s;

@@ -1,8 +1,31 @@
 <template>
-  <button><slot></slot></button>
+  <button
+      type="button" 
+      :class="classes">
+      <span>
+        <slot></slot>
+      </span>
+  </button>
 </template>
 <script>
-export default {
+const prefixCls = 'fo-btn'
 
+export default {
+  props: {
+    'long': {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    classes() {
+      return [
+        prefixCls,
+        {
+          [`${prefixCls}-long`]: this.long
+        }
+      ]
+    }
+  }
 }
 </script>
