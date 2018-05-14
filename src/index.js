@@ -1,5 +1,7 @@
 import Button from './components/button'
 
+import Message from './components/message'
+
 const components = {
   Button
 }
@@ -12,6 +14,9 @@ const install = function(Vue) {
   Object.keys(iview).forEach(key => {
     Vue.component(key, iview[key])
   })
+
+  Vue.prototype.$Message = Message
+  
 }
 
 // install(window.Vue)

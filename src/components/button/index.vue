@@ -1,7 +1,8 @@
 <template>
   <button
       type="button" 
-      :class="classes">
+      :class="classes"
+      @click="handleClick">
       <span>
         <slot></slot>
       </span>
@@ -15,6 +16,9 @@ export default {
     'long': {
       type: Boolean,
       default: false
+    },
+    'type': {
+      type: String
     }
   },
   computed: {
@@ -22,9 +26,15 @@ export default {
       return [
         prefixCls,
         {
-          [`${prefixCls}-long`]: this.long
+          [`${prefixCls}-long`]: this.long,
+          [`${prefixCls}-${this.type}`]: !!this.type
         }
       ]
+    }
+  },
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event)
     }
   }
 }

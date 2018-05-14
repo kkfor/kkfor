@@ -19,7 +19,7 @@ module.exports = merge(webpackBaseConfig, {
     new HtmlWebpackPlugin({
       template: 'index.html'
     }),
-    new NamedModulesPlugin(),
+    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {
