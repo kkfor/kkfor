@@ -7,6 +7,14 @@
 </template>
 <script>
 export default {
-
+  props: {
+    content: String,
+    default: ''
+  },
+  mounted() {
+    setTimeout(function() {
+      document.body.removeChild(document.getElementsByClassName('fo-message')[0]);
+    }, 1000);
+  }
 }
 </script>

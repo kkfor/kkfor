@@ -1,5 +1,10 @@
 $message-prefix-cls: #{css-prefix}message;
 
 .#{$message-prefix-cls} {
-  
+  font-size: $font-size-small;
+  position: fixed;
+  z-index: $zindex-message;
+  width: 100%;
+  top: 16px;
+  left: 0;
 }

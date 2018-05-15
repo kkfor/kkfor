@@ -8,26 +8,30 @@ const defaults = {
   duration: 1.5
 }
 
-function Message(content='', duration=defaults.duration, type){
-  const MessageFun = Vue.extend(MessageCore)
-
-  const Instance = new MessageFun({
-    data: {
-      content: `
-      <div class="${prefixCls} ${prefixCls}-${type}">
-        <span>${content}</span>
-      </div>
-      `
+const Message = properties => {
+  const _props = properties || {}
+  const Instance = new Vue({
+    render(h) {
+      return h(MessageCore, {
+        props: _props
+      })
     }
   })
-
+  
   const component = Instance.$mount()
   document.body.appendChild(component.$el)
-
-  setTimeout(function() {
-    document.body.removeChild(document.getElementsByClassName('fo-message')[0]);
-  }, duration*1000);
+  const notification = Instance.$children[0]
+  // console.log(notification)
 }
+
+
+
+function notice(content='') {
+  Message({
+    content
+  })
+}
+
 
 export default {
   info(options) {
