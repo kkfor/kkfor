@@ -24,7 +24,7 @@ module.exports = merge(webpackBaseConfig, {
   ],
   devServer: {
     host: '0.0.0.0',
-    port: '8080',
+    port: '8090',
     noInfo: true,
     // hot: true,
     // inline: true,

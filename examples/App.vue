@@ -9,7 +9,9 @@
     methods: {
       click() {
         console.log(111)
-        this.$Message('xxxxx')
+        this.$Message.info({
+          content: 'xxxx'
+        })
       }
     }
   }

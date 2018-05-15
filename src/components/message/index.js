@@ -1,17 +1,23 @@
 import MessageCore from './message'
 import Vue from 'vue'
 
-function Message(msg){
-  const Instance = new Vue({
-    // data: {
-    //     content: msg
-    // }
-    render(h) {
-      return h(MessageCore, {
-        props: {
-          content: msg
-        }
-      })
+const prefixCls = 'fo-message'
+
+const defaults = {
+  top: 24,
+  duration: 1.5
+}
+
+function Message(content='', duration=defaults.duration, type){
+  const MessageFun = Vue.extend(MessageCore)
+
+  const Instance = new MessageFun({
+    data: {
+      content: `
+      <div class="${prefixCls} ${prefixCls}-${type}">
+        <span>${content}</span>
+      </div>
+      `
     }
   })
 
@@ -20,7 +26,14 @@ function Message(msg){
 
   setTimeout(function() {
     document.body.removeChild(document.getElementsByClassName('fo-message')[0]);
-  }, 500);
+  }, duration*1000);
 }
 
-export default Message
+export default {
+  info(options) {
+    return this.message('info', options)
+  },
+  message(type, options) {
+    return Message(options.content, options.duration, type)
+  }
+}
