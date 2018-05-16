@@ -11,7 +11,7 @@
         console.log(111)
         this.$Message.info({
           content: 'xxxx',
-          duration: 2
+          duration: 2000
         })
       }
     }

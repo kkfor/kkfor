@@ -25,7 +25,7 @@ export default {
     }
   },
   mounted() {
-    setTimeout(function() {
+    setTimeout(() => {
       document.body.removeChild(document.getElementsByClassName(this.prefixCls)[0]);
     }, this.duration*1000);
   },

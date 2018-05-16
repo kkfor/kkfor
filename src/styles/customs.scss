@@ -10,12 +10,18 @@ $info-color: #2db7f5;
 $text-color: #495060;
 $font-size-base: 14px;
 $font-size-small: 12px;
+$border-radius-small: 4px;
 
 // Border color
 $border-color-base: #dddee1;
 
 // Background color
 $background-color-base: #f7f7f7;
+
+// Shadow
+$shadow-color: rgba(0, 0, 0, .2);
+$shadow-base: 0 1px 6px $shadow-color;
+$shadow-down: $shadow-base;
 
 // Button
 $btn-font-weight: normal;

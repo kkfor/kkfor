@@ -28,7 +28,7 @@ const MessageFun = properties => {
 function Message(content='', duration, type) {
   return MessageFun({
     prefixCls,
-    content: `显示内容`,
+    content,
     duration,
     type
   })

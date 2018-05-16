@@ -1,4 +1,4 @@
-$message-prefix-cls: #{css-prefix}message;
+$message-prefix-cls: #{$css-prefix}message;
 
 .#{$message-prefix-cls} {
   font-size: $font-size-small;
@@ -7,4 +7,16 @@ $message-prefix-cls: #{css-prefix}message;
   width: 100%;
   top: 16px;
   left: 0;
+  text-align: center;
+
+  &-content {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: $border-radius-small;
+    background: #fff;
+    box-shadow: $shadow-base;
+  }
+  &-info {
+    color: $primary-color;
+  }
 }
