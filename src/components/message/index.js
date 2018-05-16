@@ -8,7 +8,7 @@ const defaults = {
   duration: 1.5
 }
 
-const Message = properties => {
+const MessageFun = properties => {
   const _props = properties || {}
   const Instance = new Vue({
     render(h) {
@@ -20,15 +20,17 @@ const Message = properties => {
   
   const component = Instance.$mount()
   document.body.appendChild(component.$el)
-  const notification = Instance.$children[0]
-  // console.log(notification)
+  // const notification = Instance.$children[0]
 }
 
 
 
-function notice(content='') {
-  Message({
-    content
+function Message(content='', duration, type) {
+  return MessageFun({
+    prefixCls,
+    content: `显示内容`,
+    duration,
+    type
   })
 }
 

@@ -10,7 +10,8 @@
       click() {
         console.log(111)
         this.$Message.info({
-          content: 'xxxx'
+          content: 'xxxx',
+          duration: 2
         })
       }
     }
