@@ -21,6 +21,17 @@ module.exports = {
         test: /\.scss$/,
         use: ['style-loader','css-loader','sass-loader'],
         exclude: /node_modules/
+      },
+      {
+        test: /\.(eot|svg|ttf|woff)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              // name: '/dist/fonts/[name].[hash:7].[ext]'
+            }
+          }
+        ]
       }
     ]
   },
