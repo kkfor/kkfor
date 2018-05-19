@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 
 module.exports = merge(webpackBaseConfig, {
+  // devtool: 'source-map',
   mode: 'development',
   entry: {
     main: './examples/main.js'
@@ -17,14 +18,14 @@ module.exports = merge(webpackBaseConfig, {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html'
+      template: path.resolve(__dirname, '../examples/index.html')
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {
     host: '0.0.0.0',
-    port: '8090',
+    port: '8070',
     noInfo: true,
     // hot: true,
     // inline: true,
