@@ -10,13 +10,13 @@ const components = {
   FormItem
 }
 
-const iview = {
+const views = {
   ...components
 }
 
 const install = function(Vue) {
-  Object.keys(iview).forEach(key => {
-    Vue.component(key, iview[key])
+  Object.keys(views).forEach(key => {
+    Vue.component(key, views[key])
   })
 
   Vue.prototype.$Message = Message
