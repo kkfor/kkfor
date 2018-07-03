@@ -1,4 +1,5 @@
 import Button from './components/button'
+import Icon from './components/icon'
 import Form from './components/form'
 import FormItem from './components/form-item'
 
@@ -6,6 +7,7 @@ import Message from './components/message'
 
 const components = {
   Button,
+  Icon,
   Form,
   FormItem
 }

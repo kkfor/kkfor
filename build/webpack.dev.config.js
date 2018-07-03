@@ -2,7 +2,6 @@ const path = require('path')
 const merge = require('webpack-merge')
 const webpackBaseConfig = require('./webpack.base.config.js')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const webpack = require('webpack')
 
 module.exports = merge(webpackBaseConfig, {
   // devtool: 'source-map',
@@ -19,9 +18,7 @@ module.exports = merge(webpackBaseConfig, {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../examples/index.html')
-    }),
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
+    })
   ],
   devServer: {
     host: '0.0.0.0',

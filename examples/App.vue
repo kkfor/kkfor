@@ -2,6 +2,7 @@
   <div>
     <Button @click="click">添加</Button>
     <Button>减少</Button>
+    <Icon type="arrow-right-a"></Icon>
   </div>
 </template>
 <script>
